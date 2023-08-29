@@ -3,8 +3,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Data from './components/Datas/Datas'
-import Card from './components/Card/Card.jsx'
+import TopHeder from './Front-End-Component/TopHeder'
 import Home from './pages/Front-End/Home'
 import Bus from './pages/Front-End/Bus'
 import Launch from './pages/Front-End/Launch'
@@ -26,6 +25,7 @@ export default function App() {
  <>
 
     <BrowserRouter>
+    <TopHeder />
     <Navbar />
       <Routes>
           <Route path="/" element={<Home />} />
