@@ -2,13 +2,10 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  
+  color: #ffffff;
  
 
  
  
 }
-.nav{
-  background-color: black;
-  color: azure;
-}
+
