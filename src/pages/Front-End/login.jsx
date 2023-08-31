@@ -4,10 +4,19 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
+
 
 function LoginForm() {
+  const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
-
+  function click() {
+  navigate("/bk")
+  }
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -16,6 +25,7 @@ function LoginForm() {
     }
 
     setValidated(true);
+    
   };
 
   return (
@@ -88,9 +98,12 @@ function LoginForm() {
           feedbackType="invalid"
         />
       </Form.Group>
-      <Button type="submit">Submit form</Button>
+      <Button type="submit"onClick={click}>Submit form</Button>
     </Form>
+     
   );
+ 
+
 }
 
 export default LoginForm;

@@ -5,7 +5,7 @@ import Sideber from '../../Back-End-Component/Sideber'
 export default function Home() {
   return (
     <div>
-        <Nave />
+       
         <div>
             <Sideber />
         </div>
