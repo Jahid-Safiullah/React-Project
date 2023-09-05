@@ -2,7 +2,7 @@
 import ban from '../../assets/slider_image_bus.png'
 import Marquee from "react-fast-marquee";
 import BookingForm from '../../Front-End-Component/Form/BookingForm'
-
+import BeforSeatBookingCarousel from '../../Front-End-Component/Carousel/BeforSeatBookingCarousel'
 export default function Bus() {
   return (
     <div>
@@ -19,8 +19,10 @@ export default function Bus() {
             </div>
             <p className='p-3' style={{borderBottom:"5px solid green", marginLeft:"30px",marginRight:"30px" }}></p>
         
-      <div>saho</div>
-      <div>katim</div>
+      <div>
+      <BeforSeatBookingCarousel />
+      </div>
+     
 
     </div>
   )

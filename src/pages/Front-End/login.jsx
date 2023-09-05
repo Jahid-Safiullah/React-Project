@@ -14,9 +14,12 @@ import { useNavigate } from 'react-router-dom';
 function LoginForm() {
   const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
-  function click() {
-  navigate("/bk")
+  
+  function click() {navigate("/bk")
+    window.location.reload(true);
+  
   }
+  
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -29,8 +32,10 @@ function LoginForm() {
   };
 
   return (
-    <Form className='tex-aline-center' noValidate validated={validated} onSubmit={handleSubmit}>
-      <Row className="mb-3">
+    <Form style={{justifyContent:"center",height:"1000px",background:" rgb(2,0,36)",
+    background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(63,136,1,0.9444152661064426) 30%, rgba(0,212,255,1) 100%)"}} className='tex-aline-center' noValidate validated={validated} onSubmit={handleSubmit}>
+      
+      <Row className="" style={{marginLeft:"300px",marginRight:"300px"}}>
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Label>First name</Form.Label>
           <Form.Control
@@ -67,7 +72,7 @@ function LoginForm() {
           </InputGroup>
         </Form.Group>
       </Row>
-      <Row className="mb-3">
+      <Row className="mb-3" style={{marginLeft:"300px",marginRight:"300px"}}>
         <Form.Group as={Col} md="6" controlId="validationCustom03">
           <Form.Label>City</Form.Label>
           <Form.Control type="text" placeholder="City" required />
@@ -90,7 +95,7 @@ function LoginForm() {
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3"style={{marginLeft:"315px",marginRight:"300px"}}>
         <Form.Check
           required
           label="Agree to terms and conditions"

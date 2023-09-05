@@ -1,7 +1,3 @@
-
-
-
-
 import './App.css'
 import TopHeder from './Front-End-Component/TopHeder'
 import Home from './pages/Front-End/Home'
@@ -13,6 +9,7 @@ import Navbar from './Front-End-Component/Navbar/Navber'
 import Footer from './Front-End-Component/footer/footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BackendHome from './pages/Back-End/Home'
+
 import {
   BrowserRouter,
   Routes,
@@ -29,6 +26,7 @@ export default function App() {
     <BrowserRouter>
     <TopHeder />
     <Navbar />
+    
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Bus" element={<Bus />}/>
