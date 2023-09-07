@@ -8,7 +8,9 @@ import Login from './pages/Front-End/login'
 import Navbar from './Front-End-Component/Navbar/Navber'
 import Footer from './Front-End-Component/footer/footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
 import BackendHome from './pages/Back-End/Home'
+import Carousel from './Front-End-Component/Carousel/Carousel'
 
 import {
   BrowserRouter,
@@ -33,8 +35,10 @@ export default function App() {
           <Route path="/Launch" element={<Launch />} />
           <Route path="/Train" element={<Train />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/carousel" element={<Carousel />} />
 
       </Routes>
+   
       <Footer />
     </BrowserRouter>
 

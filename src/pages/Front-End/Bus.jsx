@@ -3,6 +3,7 @@ import ban from '../../assets/slider_image_bus.png'
 import Marquee from "react-fast-marquee";
 import BookingForm from '../../Front-End-Component/Form/BookingForm'
 import BeforSeatBookingCarousel from '../../Front-End-Component/Carousel/BeforSeatBookingCarousel'
+import Buy_bus_tickets_in_3_easy_steps from '../../Front-End-Component/Body/Buy_bus_tickets_in_3_easy_steps'
 export default function Bus() {
   return (
     <div>
@@ -18,7 +19,9 @@ export default function Bus() {
             </div>
             </div>
             <p className='p-3' style={{borderBottom:"5px solid green", marginLeft:"30px",marginRight:"30px" }}></p>
-        
+        <div>
+          <Buy_bus_tickets_in_3_easy_steps />
+        </div>
       <div>
       <BeforSeatBookingCarousel />
       </div>

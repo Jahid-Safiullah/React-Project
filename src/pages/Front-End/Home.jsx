@@ -12,16 +12,16 @@ export default function Home() {
       </Marquee>
       </div>
       <img src="banner.svg" alt="" />
-      <div className='d-flex m-4 p-3 bg-success '>
-        <div className='col'>
-          <h1>100+ Million​​</h1>
+      <div className='d-flex  justify-content-evenly  text-light pt-3 mt-3' style={{backgroundColor:"#089d49",font:"cursive"}}>
+        <div className=' '>
+          <h1 className="" style={{font:"cursive"}}>100+ Million​​</h1>
            <p>Tickets Sold​</p>
         </div>
-        <div className='col'>
+        <div className=''>
           <h1> 3,000​​​</h1>
            <p>Routes​ ​</p>
         </div>
-        <div className='col'>
+        <div className=''>
           <h1>5+ Million​​​</h1>
            <p> App Downloads​ </p>
         </div>
