@@ -12,6 +12,7 @@ import 'animate.css';
 import BackendHome from './pages/Back-End/Home'
 import Carousel from './Front-End-Component/Carousel/Carousel'
 
+
 import {
   BrowserRouter,
   Routes,
@@ -32,6 +33,9 @@ export default function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Bus" element={<Bus />}/>
+            {/* <Route path="/BookingDetails" element={<BookingDetails />}/>
+          </Route> */}
+
           <Route path="/Launch" element={<Launch />} />
           <Route path="/Train" element={<Train />} />
           <Route path="/Login" element={<Login />} />

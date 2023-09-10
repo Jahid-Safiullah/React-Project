@@ -4,6 +4,8 @@ import Marquee from "react-fast-marquee";
 import BookingForm from '../../Front-End-Component/Form/BookingForm'
 import BeforSeatBookingCarousel from '../../Front-End-Component/Carousel/BeforSeatBookingCarousel'
 import Buy_bus_tickets_in_3_easy_steps from '../../Front-End-Component/Body/Buy_bus_tickets_in_3_easy_steps'
+
+import Profile from '../../Front-End-Component/Body/Profile';
 export default function Bus() {
   return (
     <div>
@@ -25,7 +27,9 @@ export default function Bus() {
       <div>
       <BeforSeatBookingCarousel />
       </div>
-     
+  
+      <Profile />
+
 
     </div>
   )
