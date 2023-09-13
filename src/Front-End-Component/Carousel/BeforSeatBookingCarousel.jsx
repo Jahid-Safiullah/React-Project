@@ -3,7 +3,7 @@ import React from 'react'
 function BeforSeatBookingCarousel() {
     return (
         <div className='container'>
-            <div className='row ' style={{}}>
+            <div className='row p-3' style={{}}>
                 <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active d-flex" data-bs-interval="2000">
@@ -11,7 +11,7 @@ function BeforSeatBookingCarousel() {
                             <div className='px-5'><img src="src/assets/img/image1.png" className="d-block w-100" alt="..." /></div>
                             <div className='px-5'><img src="src/assets/img/image1.png" className="d-block w-100" alt="..." /></div>
                         </div>
-                        <div className="carousel-item d-flex" data-bs-interval="2000">
+                        <div className="carousel-item d-flex" data-bs-interval="1000">
                             <div className='px-5'><img src="src/assets/img/image1.png" className="d-block w-100" alt="..." /></div>
                             <div className='px-5'><img src="src/assets/img/image1.png" className="d-block w-100" alt="..." /></div>
                             <div className='px-5'><img src="src/assets/img/image1.png" className="d-block w-100" alt="..." /></div>

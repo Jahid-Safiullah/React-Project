@@ -1,9 +1,10 @@
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import React, { Component } from "react";
 
 
-import React from 'react'
-import "./OurTraustedPartner.css"
-import "./js.js"
 
 function OurTraustedPartner() {
     const customSlider = {
@@ -44,28 +45,30 @@ function OurTraustedPartner() {
 
     return (
         <div>
-            <div>
-                <div>
-                    <div>
-                        <div>Our Trusted Partners</div>
+           
+                <div className="p-5" style={{backgroundColor: "#f6f9ff"}}>
+                    <div className="pb-4">
+                        <div><h1 className="fw-bold">Our Trusted Partners</h1></div>
                     </div>
 
-                    <div className='    bg-success  d-flex' {...customSlider}>
+                    <div className=' p-5' >
 
-                        <div className='custom-box' > <img className="" src="src/assets/img/Ena-transport-prvt-Ltd-208x78.png" alt="Ena-transport" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/green-line-paribahan-208x78.png" alt="green-line-paribahan" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/Hanif-AC-208x78.png" alt="Hanif" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/nabil-paribahan-208x78.png" alt="nabil-paribahan" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/Soudia-coach-services-208x78.png" alt="Soudia-coach" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
-                        <div className='custom-box'> <img src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
+                        <Slider {...customSlider} >
+                        <div className='custom-box  ' > <img className="border" src="src/assets/img/Ena-transport-prvt-Ltd-208x78.png" alt="Ena-transport" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/green-line-paribahan-208x78.png" alt="green-line-paribahan" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/Hanif-AC-208x78.png" alt="Hanif" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/nabil-paribahan-208x78.png" alt="nabil-paribahan" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/Soudia-coach-services-208x78.png" alt="Soudia-coach" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
+                        <div className='custom-box '> <img  className="border" src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
+                        <div className='custom-box '> <img className="border"  src="src/assets/img/Star-Line-208x78.png" alt="Star-Line" /></div>
 
+                        </Slider>
                     </div>
 
                 </div>
-            </div>
+           
         </div>
     )
 }

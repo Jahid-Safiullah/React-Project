@@ -32,7 +32,7 @@ function LoginForm() {
   };
 
   return (
-    <Form style={{justifyContent:"center",height:"1000px",background:" rgb(2,0,36)",
+    <Form style={{justifyContent:"center",height:"1000px",
     background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(63,136,1,0.9444152661064426) 30%, rgba(0,212,255,1) 100%)"}} className='tex-aline-center' noValidate validated={validated} onSubmit={handleSubmit}>
       
       <Row className="" style={{marginLeft:"300px",marginRight:"300px"}}>

@@ -7,8 +7,14 @@ function Profile() {
     pass_name: "",
     pass_email: "",
     pass_contact: "",
+    doj:"",
+    dor:"",
     select_bus: "",
     bus_type: "",
+    starting_point: "",
+    ending_point: "",
+    Seat:"",
+    fare:"",
   });
   const onValChange = (event) => {
     const value = (res) => ({
@@ -23,7 +29,7 @@ function Profile() {
     if (checkVal) {
       const dataObj = (data) => [...data, formObject];
       setTableData(dataObj);
-      const isEmpty = { pass_name: "", pass_email: "", pass_contact: "",select_bus:"", bus_type:""};
+      const isEmpty = { pass_name: "", pass_email: "", pass_contact: "",select_bus:"", bus_type:"",starting_point:"",ending_point:"",Seat:"",fare:"",};
       setFormObject(isEmpty);
     }
   };
