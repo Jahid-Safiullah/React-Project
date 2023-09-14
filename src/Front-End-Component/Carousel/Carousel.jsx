@@ -1,4 +1,4 @@
-import './Style.css'
+import './carousel.css'
 import 'animate.css';
 
 export default function Carousel() {

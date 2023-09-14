@@ -1,7 +1,8 @@
 function Form({ onValChange, formObject, onFormSubmit }) {
     return (
-        <div className="border border-success my-5">
-      <div className="row mb-4  my-5 mx-4">
+        <div className="border border-success my-5 mx-3"> 
+      <div className="row mb-4  my-3 mx-4">
+           < div ><h2 className="bg-success rounded text-light p-2">Bus Booking Form</h2>  </div>
         <div className="col">
         <div className="mb-3">
           <input

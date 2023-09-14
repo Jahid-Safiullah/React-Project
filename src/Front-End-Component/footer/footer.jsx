@@ -1,6 +1,7 @@
 // import React from 'react'
 import './footer.css'
 import Logo from '../../assets/Shohoz_logo_173x74.svg'
+import { Link } from 'react-router-dom'
 
 
 
@@ -17,12 +18,12 @@ export default function Footer() {
 
 				<p className="footer-links">
 					<a href="#" className="link-1">Home</a>
-					
-					<a href="#">Blog</a>
+					<link to="/Login"></link>
+					<a href="#">Log in</a>
 				
-					<a href="#">Pricing</a>
+					<a href="#">Sign in</a>
 				
-					<a href="#">About</a>
+					<a href="#">About us</a>
 					
 					<a href="#">Faq</a>
 					

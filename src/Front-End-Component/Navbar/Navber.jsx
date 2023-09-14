@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-
+import './Navbar.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,7 +11,7 @@ import Logo from '../../assets/Shohoz_logo_173x74.svg'
 
 export default function Navber() {
   return (
-    <Navbar className='bg-light' data-bs-theme="dark">
+    <Navbar className='bg-light sticky-top shadow  rounded ' data-bs-theme="dark">
     <Container>
         <Navbar.Brand href="/"> <img src={Logo} alt="Shohoz_logo" style={{height:"60px"}} /> </Navbar.Brand>
         
