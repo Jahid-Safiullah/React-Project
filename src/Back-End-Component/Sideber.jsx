@@ -1,16 +1,21 @@
-import Nav from 'react-bootstrap/Nav';
+import { NavLink } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+import "./Sideber.css"
 
 function Sideber() {
   return (
-    <Nav defaultActiveKey="/home" className="flex-column">
-      <Nav.Link href="/home">Active</Nav.Link>
-      <Nav.Link eventKey="link-1">Link</Nav.Link>
-      <Nav.Link eventKey="link-2">Link</Nav.Link>
-      <Nav.Link eventKey="disabled" disabled>
-        Disabled
-      </Nav.Link>
+    <div>
+      <div className="bakendsideber">
+      <Nav defaultActiveKey="/home" className=" flex-column">
+      <NavLink className={"itemdesign"} to="/home">Active</NavLink>
+      <NavLink className={"itemdesign"} to="/BusDashbord">Bus Dashbord</NavLink>
+      <NavLink className={"itemdesign"} to="LaunchDashbord">Launch Dashbord</NavLink>
+      <NavLink className={"itemdesign"} to="/TrainDashbord" >Train Dashbord</NavLink>
     </Nav>
-  );
+      </div>
+    </div>
+   
+  ); 
 }
 
 export default Sideber;

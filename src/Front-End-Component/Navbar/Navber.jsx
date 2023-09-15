@@ -3,24 +3,25 @@ import React from 'react'
 
 import './Navbar.css'
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Nav,Navbar,NavbarBrand} from 'react-bootstrap';
+
 import Logo from '../../assets/Shohoz_logo_173x74.svg'
+import { NavLink } from 'react-router-dom';
 
 
 
 export default function Navber() {
   return (
-    <Navbar className='bg-light sticky-top shadow  rounded ' data-bs-theme="dark">
+    <Navbar className='bg-light sticky-top shadow  rounded ' >
     <Container>
-        <Navbar.Brand href="/"> <img src={Logo} alt="Shohoz_logo" style={{height:"60px"}} /> </Navbar.Brand>
+        <NavbarBrand href="/"> <img src={Logo} alt="Shohoz_logo" style={{height:"60px"}} /> </NavbarBrand>
         
-        <Nav  className="me-auto p-3 ">
-        <Nav.Link className='fw-bold pe-3' href="/">Home</Nav.Link>
-        <Nav.Link  className='fw-bold pe-3' href="/Bus"><i className="fa-solid fa-bus-simple p-1" />Bus</Nav.Link>
-        <Nav.Link className='fw-bold pe-3' href="/Launch"><i className="fa-solid fa-ship p-1"></i>Launch</Nav.Link>
-        <Nav.Link className='fw-bold pe-3' href="/Train"><i className="fa-solid fa-train-subway p-1"></i>Train</Nav.Link>
-        <Nav.Link className='fw-bold' href="/Login">Login</Nav.Link>
+        <Nav  className=" nav me-auto  ">
+        <NavLink className=' Nav-Link fw-bold p-2' to="/">Home</NavLink>
+        <NavLink  className='Nav-Link fw-bold p-2' to="/Bus"><i className=" fa-solid fa-bus-simple p-1" />Bus</NavLink>
+        <NavLink className=' Nav-Link fw-bold p-2' to="/Launch"><i className=" fa-solid fa-ship p-1 "></i>Launch</NavLink>
+        <NavLink className='Nav-Link fw-bold p-2' to="/Train"><i className=" fa-solid fa-train-subway p-1"></i>Train</NavLink>
+        <NavLink className='Nav-Link fw-bold p-2' to="/Login">Login</NavLink>
       </Nav>
       
     </Container>
