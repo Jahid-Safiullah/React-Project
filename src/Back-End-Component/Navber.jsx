@@ -13,12 +13,12 @@ function TextLinkExample() {
         <NavLink  className=' fw-bold p-2' to="/Bus"><i className=" fa-solid fa-bus-simple p-1" />Bus</NavLink>
         <NavLink className='  fw-bold p-2' to="/Launch"><i className=" fa-solid fa-ship p-1 "></i>Launch</NavLink>
         <NavLink className=' fw-bold p-2' to="/Train"><i className=" fa-solid fa-train-subway p-1"></i>Train</NavLink>
-        <NavLink className=' fw-bold p-2' to="/Login">Login</NavLink>
+        <NavLink className=' fw-bold p-2' to="/Login">Logout</NavLink>
       </Nav>
       
     </Container>
   </Navbar>
-    
+  
   );
 }
 
