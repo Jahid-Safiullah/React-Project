@@ -1,12 +1,75 @@
-.bakendsideber{
-    text-align: left;
-    background-color: rgb(99, 153, 99);
-    font-weight: bold;
-    margin: 5px;
-    
 
-}
-.itemdesign{
-    color: rgb(255, 255, 255);
-    padding: 3px;
-}
+/*--------------------------siderbar---------*/
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the sidebar */
+  .sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar .logo {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .sidebar .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+  }
+  
+  .sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+  
+  .sidebar .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-left: 4px solid transparent;
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+  }
+  
+  .sidebar a.active,
+  .sidebar a:hover {
+    background-color: #22a405;
+    border-left: 4px solid #fff;
+  }
+  
+  .sidebar a i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  /* Style the main content area */
+  main {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  

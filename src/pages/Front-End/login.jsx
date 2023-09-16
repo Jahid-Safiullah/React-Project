@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import TopHeder from '../../Front-End-Component/TopHeder';
+import Navber from '../../Front-End-Component/Navbar/Navber';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../Front-End-Component/footer/footer';
 
 
 
@@ -12,10 +15,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 function LoginForm() {
+  <div>
+    
+  </div>
   const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
   
-  function click() {navigate("/bk")
+  function click() {navigate("/Sidebar")
     window.location.reload(true);
   
   }
@@ -32,6 +38,11 @@ function LoginForm() {
   };
 
   return (
+    <div>
+      <div>
+      <TopHeder />
+                <Navber />
+      </div>
     <Form style={{justifyContent:"center",height:"1000px",
     background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(63,136,1,0.9444152661064426) 30%, rgba(0,212,255,1) 100%)"}} className='tex-aline-center' noValidate validated={validated} onSubmit={handleSubmit}>
       
@@ -105,7 +116,8 @@ function LoginForm() {
       </Form.Group>
       <Button type="submit"onClick={click}>Submit form</Button>
     </Form>
-     
+    <div><Footer /></div>
+    </div>
   );
  
 

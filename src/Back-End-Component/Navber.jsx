@@ -2,7 +2,7 @@ import { Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-function TextLinkExample() {
+function Navber() {
   return (
     <Navbar className='bg-light sticky-top shadow  rounded ' >
     <Container>
@@ -22,4 +22,4 @@ function TextLinkExample() {
   );
 }
 
-export default TextLinkExample;
+export default Navber;
