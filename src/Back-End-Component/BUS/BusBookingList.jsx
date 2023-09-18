@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Bus.css";
+import Sidebar from "../Sideber";
+import Navber from "../../Front-End-Component/Navbar/Navber";
 
 function BusBookingList() {
   const [users, setUsers] = useState();
   const dataFetch = () => {
-    fetch("http://localhost/React-Project/api/getUsers.php")
+    fetch("http://localhost/my-react-project/api/getUsers.php")
       .then((response) => response.json())
       .then((users) => {
         setUsers(users);
@@ -33,7 +35,7 @@ function BusBookingList() {
   };
   const deleteUser = async (id) => {
     let Formid = { id: id };
-    const response = await fetch("http://localhost/React-Project/api/deleteUser.php", {
+    const response = await fetch("http://localhost/my-react-project/api/deleteUser.php", {
       method: "POST",
       body: JSON.stringify(Formid),
     });
@@ -44,7 +46,7 @@ function BusBookingList() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost/React-Project/api/createUser.php", {
+    const response = await fetch("http://localhost/my-react-project/api/createUser.php", {
       method: "POST",
       body: JSON.stringify(formData),
     });
@@ -59,42 +61,50 @@ function BusBookingList() {
   };
 
   return (
-    <div>
-      <h1>Input</h1>
-      <Link to="/BusManagement/EditBus">
+   <>
+   
+   <div className="conatainer-fluid d-flex">
+   
+    <div className="col-md-3">
+      <Sidebar />
+   </div>
+    <div className="col-md-8 p-0 m-0 ">
+      <h1 className="bg-success text-light ">Bus information Listing </h1>
+      {/* <Link to="/BusManagement/EditBus">
         <h3>Edit Page</h3>
-      </Link>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+      </Link> */}
+      <form className="border" onSubmit={handleSubmit}>
+        <div className="  mb-3">
+          <label className=" form-label   " htmlFor="name">Bus Name:</label>
+          <input className="form-control " type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+         
+        </div>
+        
+        <div className="mb-3">
+          <label className="form-label" htmlFor="">Company:</label>
+          <input className="form-control" type="text" name="email" value={formData.email} onChange={handleChange} />
+        </div>
+        
+        <div className="mb-3">
+          <label className="form-label" htmlFor="">Driver Phone Number:</label>
+          <input className="form-control"  type="text" name="phone" value={formData.phone} onChange={handleChange} />
+        </div>
+       
+        <div className="mb-3">
+          <label className="form-label" htmlFor="">Bus Number:</label>
+          <input className="form-control"  type="text" name="nid" value={formData.nid} onChange={handleChange} />
         </div>
         <br />
-        <div>
-          <label htmlFor="">Email:</label>
-          <input type="text" name="email" value={formData.email} onChange={handleChange} />
-        </div>
-        <br />
-        <div>
-          <label htmlFor="">Phone:</label>
-          <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
-        </div>
-        <br />
-        <div>
-          <label htmlFor="">Nid:</label>
-          <input type="text" name="nid" value={formData.nid} onChange={handleChange} />
-        </div>
-        <br />
-        <button type="submit">Submit</button>
+        <button className="btn btn-success  col-12 mx-auto" type="submit">Submit</button>
       </form>
 
-      <table style={{ width: "1000px" }}>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Nid</th>
+      <table className="mt-5 table border" >
+        <thead className="bg-success text-light " style={{marginTop:"50px"}}>
+          <tr className="">
+            <th>Bus Name</th>
+            <th>Company </th>
+            <th>Driver Phone Number</th>
+            <th>Bus Number</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -106,18 +116,24 @@ function BusBookingList() {
               <td>{user.user_phone}</td>
               <td>{user.user_nid}</td>
               <td>
-                <Link to={"/BusManagement/EditBus/" + user.user_id} style={{ background: "#f1f1f1", padding: "10px 30px", marginRight: "10px" }}>
+                <button><Link to={"/BusBookingList/EditBus/" + user.user_id} style={{ textDecoration:"none",color:"white", background: "green", padding: "3px 40px" }}>
                   Edit
                 </Link>
-                <Link style={{ background: "red", padding: "10px 30px", color: "white" }} onClick={() => deleteUser(user.user_id)}>
+                </button>
+                
+                <button>
+                <Link style={{textDecoration:"none", background: "red", padding: "3px 30px", color: "white" }} onClick={() => deleteUser(user.user_id)}>
                   Delete
                 </Link>
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+    </div>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import BusBookingList from "./BusBookingList";
 function EditBus() {
   const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
     let body = { id: id };
-    fetch("http://localhost/React-Project/api/getSingleUser.php", {
+    fetch("http://localhost/my-react-project/api/getSingleUser.php", {
       method: "post",
       body: JSON.stringify(body),
     })
@@ -42,13 +42,13 @@ function EditBus() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost/React-Project/api/updateUser.php", {
+    const response = await fetch("http://localhost/my-react-project/api/updateUser.php", {
       method: "POST",
       body: JSON.stringify(formData),
     });
     if (response.status === 200) {
       console.log("success");
-      navigate("/");
+      navigate("/BusBookingList");
     } else {
       console.log("failed");
     }

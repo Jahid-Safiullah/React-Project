@@ -6,7 +6,7 @@ export default function BusManagement() {
   return (
     <div>
       jahid
-      <h5><Link style={{textDecoration:"none"}} to="/BusBookingList">Go to Bus Booking List</Link></h5>
+      {/* <h5><Link style={{textDecoration:"none"}} to="/BusBookingList">Go to Bus Booking List</Link></h5> */}
       
     </div>
   )

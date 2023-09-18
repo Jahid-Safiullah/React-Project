@@ -49,8 +49,8 @@ export default function App() {
                        {/* backend router */}
                    <Route path="/Sidebar" element={<Sidebar />} />
 
-                   <Route path="/BusManagement" element={<BusBookingList />} >
-                   <Route path="/BusManagement/EditBus" element={<EditBus />} />
+                   <Route path="/BusBookingList" element={<BusBookingList />} >
+                   <Route path="/BusBookingList/EditBus/:id" element={<EditBus />} />
                    </Route>
                    <Route path="/LaunchManagment" element={<LaunchManagment />} />
                    <Route path="/Logout" element={<Logout />} />
