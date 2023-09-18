@@ -22,7 +22,7 @@ const Sidebar = () => {
 
             <ul className="menu">
               <Nav>
-                <li><Link to="/" className="active"><i className="fa fa-home"></i> Dashboard</Link></li>
+                <li><Link to="/Dashbord" className="active"><i className="fa fa-home"></i> Dashboard</Link></li>
                 {/* <li><Link to="/adduser"><i className="fa fa-user-plus"></i>Bus</Link> </li> */}
                 <div className="dropdown">
 
