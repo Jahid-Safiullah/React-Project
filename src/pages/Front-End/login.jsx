@@ -1,85 +1,90 @@
 import { useState } from 'react';
-import TopHeder from '../../Front-End-Component/TopHeder';
-import Navber from '../../Front-End-Component/Navbar/Navber';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../../Front-End-Component/footer/footer';
+import TopHeader from '../../Front-End-Component/TopHeder';
+import Navbar from '../../Front-End-Component/Navbar/Navber';
+import { useHistory } from 'react-router-dom';
+import Footer from '../../Front-End-Component/footer/Footer';
 
-
-
-
-
-
-
-async function signUp() {
-  let item = { name, email, password };
-  console.warn(item);
-
-  try {
-    let result = await fetch("http://localhost:8000/api/register", {
-      method: 'POST',
-      body: JSON.stringify(item),
-      headers: {
-        "Content-Type": "application/json",  // Corrected header name
-        "Accept": "application/json"
-      }
-    });
-
-    result = await result.json();
-    console.warn("result", result);
-  } catch (error) {
-    console.error("Error during sign-up:", error);
-  }
-}
-
-
-
-
+function LoginForm() {
   
-  const navigate = useNavigate();
-  const [validated, setValidated] = useState(false);
-  function click() {navigate("/Sidebar")
-    window.location.reload(true); 
-  }
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const history=useHistory();
   
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+
+  async function signUp() {
+    let item = { name, email, password };
+    console.warn(item);
+
+    try {
+      let result = await fetch("http://localhost:8000/api/register", {
+        method: 'POST',
+        body: JSON.stringify(item),
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+      });
+
+      result = await result.json();
+      localStorage.setItem("user-info",JSON.stringify(result))
+      history.push("/add")
+      console.warn("result", result);
+    } catch (error) {
+      console.error("Error during sign-up:", error);
     }
-    setValidated(true);
-    
-  };
-
-
+  }
 
 
   return (
     <div>
-      <div>
-      <TopHeder />
-      <Navber />
+      <TopHeader />
+      <Navbar />
+      <div className="col-sm-6 offset-sm-3">
+        <div className="input-group input-group-sm mb-3">
+          <span className="input-group-text" id="inputGroup-sizing-sm">Name:</span>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            className="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div className="input-group input-group-sm mb-3">
+          <span className="input-group-text" id="inputGroup-sizing-sm">Email:</span>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            className="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div className="input-group input-group-sm mb-3">
+          <span className="input-group-text" id="inputGroup-sizing-sm">Password:</span>
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            className="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={signUp}
+          className="btn btn-primary"
+        >
+          Click me
+        </button>
       </div>
-      <div class="col-sm-6 offset-sm-3" >
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Name:</span>
-          <input value={name} onChange={(e)=>setName(e.target.value)} type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
-        </div>
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Email:</span>
-          <input value={email} onChange={(e)=>setEmail(e.target.value)} type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
-        </div>
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Password:</span>
-          <input value={password} onChange={(e)=>setPassword(e.target.value)} type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
-        </div>
-        <button onClick={signUp} className="btn btn-primary">Click me</button>
-      </div>
-    <div><Footer /></div>
+      <div><Footer /></div>
     </div>
   );
- 
-
 }
 
 export default LoginForm;
