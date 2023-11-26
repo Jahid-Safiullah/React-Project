@@ -1,16 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TopHeader from '../../Front-End-Component/TopHeder';
 import Navbar from '../../Front-End-Component/Navbar/Navber';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import Footer from '../../Front-End-Component/footer/Footer';
 
 function LoginForm() {
-  
+  useEffect(()=>{
+    if(localStorage.getItem("user-info")){
+      navigate("/Sidebar"); 
+    }
+  })
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history=useHistory();
-  
+  // const history = useHistory();
+  const navigate = useNavigate(); 
+
 
   async function signUp() {
     let item = { name, email, password };
@@ -27,8 +34,11 @@ function LoginForm() {
       });
 
       result = await result.json();
-      localStorage.setItem("user-info",JSON.stringify(result))
-      history.push("/add")
+      
+      localStorage.setItem("user-info", JSON.stringify(result));
+      console.log("Data stored in localStorage");
+      // history.push("/add")
+      navigate("/Sidebar"); 
       console.warn("result", result);
     } catch (error) {
       console.error("Error during sign-up:", error);
@@ -40,7 +50,7 @@ function LoginForm() {
     <div>
       <TopHeader />
       <Navbar />
-      <div className="col-sm-6 offset-sm-3">
+      <div className="col-sm-4 offset-sm-4 card p-5 mt-5 mb-5">
         <div className="input-group input-group-sm mb-3">
           <span className="input-group-text" id="inputGroup-sizing-sm">Name:</span>
           <input
@@ -79,7 +89,7 @@ function LoginForm() {
           onClick={signUp}
           className="btn btn-primary"
         >
-          Click me
+          sign up
         </button>
       </div>
       <div><Footer /></div>

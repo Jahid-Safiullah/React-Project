@@ -7,7 +7,7 @@ import BeforSeatBookingCarousel from '../../Front-End-Component/Carousel/BeforSe
 import Buy_bus_tickets_in_3_easy_steps from '../../Front-End-Component/Body/Buy_bus_tickets_in_3_easy_steps'
 
 import Profile from '../../Front-End-Component/Body/Profile';
-import Footer from '../../Front-End-Component/footer/footer';
+import Footer from '../../Front-End-Component/footer/Footer';
 export default function Bus() {
   return (
     <div>

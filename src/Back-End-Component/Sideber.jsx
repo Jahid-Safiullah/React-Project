@@ -5,18 +5,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navber from "./Navber";
 
+
 const Sidebar = () => {
   return (
     <>
       <div className="container-fluid ">
-        <div>
-         
-        </div>
-        <div>
-
           <aside className="sidebar">
             <div className="logo">
-              {/* <img src="logo.png" alt="Company Logo"> */}
+            
+            <img src="..\assets\Shohoz_logo_173x74.svg" alt="Shohoz_logo" style={{height:"60px"}} />
               <h2>Admin Dashboard</h2>
             </div>
 
@@ -46,8 +43,6 @@ const Sidebar = () => {
 
             </ul>
           </aside>
-
-        </div>
       </div>
     </>
   )

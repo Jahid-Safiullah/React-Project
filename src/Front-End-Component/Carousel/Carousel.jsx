@@ -1,5 +1,5 @@
-import './carousel.css'
-import 'animate.css';
+import './carousel.css';
+
 
 export default function Carousel() {
   return (
