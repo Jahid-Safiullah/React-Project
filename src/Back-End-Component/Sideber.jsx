@@ -1,12 +1,20 @@
 import { NavLink } from "react-router-dom";
-import { Nav } from "react-bootstrap";
+import { Nav,NavDropdown } from "react-bootstrap";
 import "./Sideber.css"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navber from "./Navber";
+import { useNavigate } from "react-router-dom";
 
 
 const Sidebar = () => {
+  const user=JSON.parse(localStorage.getItem('user-info'));
+  const navagation=useNavigate();
+  function logout(){
+    localStorage.clear();
+    navagation("/login")
+  }
+
   return (
     <>
       <div className="container-fluid ">
@@ -36,9 +44,14 @@ const Sidebar = () => {
                 <li><Link to="/TrainManagement"><i className="fa fa-train"></i> Train Management</Link></li>
                 <li><Link to="/reports"><i className="fa fa-bar-chart"></i> Reports</Link></li>
 
-
-                <li><Link to="/Logout"><i className="fa fa-sign-out"></i> Log out</Link></li>
-
+                <li><Link to="/Logout"> Log out</Link></li>
+                
+               <li>
+               <NavDropdown title={user.name} style={{color:"white"}} >
+                  <NavDropdown.Item onClick={logout} style={{color:"black"}} > <i className="fa fa-sign-out"></i>Log out</NavDropdown.Item>
+                  <NavDropdown.Item style={{color:"black"}}>Profile</NavDropdown.Item>
+                </NavDropdown>
+               </li>
               </Nav>
 
             </ul>

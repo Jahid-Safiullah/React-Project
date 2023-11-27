@@ -5,7 +5,7 @@ import Home from './pages/Front-End/Home'
 import Bus from './pages/Front-End/Bus'
 import Launch from './pages/Front-End/Launch'
 import Train from './pages/Front-End/Train'
-import Login from './pages/Front-End/login'
+import Registraion from './pages/Front-End/Registraion'
 
 import Error from './pages/Front-End/Error'
 
@@ -28,51 +28,47 @@ import {
 
 export default function App() {
   return (
-    
- <>
 
-<BrowserRouter>
-               
+    <>
 
-               <Routes>
-                   <Route path="/" element={<Home />} />
-                   <Route path="/Bus" element={<Bus />} />
-                   {/* <Route path="/BookingDetails" element={<BookingDetails />}/>
+      <BrowserRouter>
+
+
+        <Routes>
+          {/*--------------------------------- forntend router -------------------------------------------------------------------*/}
+
+          <Route path="/" element={<Home />} />
+          <Route path="/Bus" element={<Bus />} />
+          {/* <Route path="/BookingDetails" element={<BookingDetails />}/>
                    </Route> */}
 
-                   <Route path="/Launch" element={<Launch />} />
-                   <Route path="/Train" element={<Train />} />
-                   <Route path="/Login" element={<Login />} />
-                   <Route path="*" element={<Error />} />
-                   {/* <Route path="/carousel" element={<Carousel />} /> */}
+          <Route path="/Launch" element={<Launch />} />
+          <Route path="/Train" element={<Train />} />
+          <Route path="/Registraion" element={<Registraion />} />
+          <Route path="*" element={<Error />} />
+          {/* <Route path="/carousel" element={<Carousel />} /> */}
 
 
-                       {/* backend router */}
-                   <Route path="/Sidebar" element={<Protected Cmp={Sidebar} />} />
-
-                   <Route path="/BusBookingList" element={<Protected Cmp={BusBookingList} />} >
-                   <Route path="/BusBookingList/EditBus/:id" element={<Protected Cmp={EditBus} />} />
-                   </Route>
-                   <Route path="/LaunchManagment" element={<Protected Cmp={LaunchManagment} />} />
-                   <Route path="/Logout" element={<Protected Cmp={Logout}  />} />
-
-                   {/* <Route path="/TrainManagement" element={<TrainManagement />} /> */}
-
-               </Routes>
-
-               
-           </BrowserRouter>
-    {/* <BrowserRouter>
-      <Routes>
-        
-           <Route path="/bk" element={<BackendHome />} />
-      </Routes>
-    </BrowserRouter> */}
+          {/*--------------------------------- backend router -------------------------------------------------------------------*/}
 
 
-   
+          <Route path="/Sidebar" element={<Protected Cmp={Sidebar} />} />
 
-  </>
+          <Route path="/BusBookingList" element={<Protected Cmp={BusBookingList} />} >
+            <Route path="/BusBookingList/EditBus/:id" element={<Protected Cmp={EditBus} />} />
+          </Route>
+          <Route path="/LaunchManagment" element={<Protected Cmp={LaunchManagment} />} />
+          <Route path="/Logout" element={<Protected Cmp={Logout} />} />
+
+          {/* <Route path="/TrainManagement" element={<TrainManagement />} /> */}
+
+        </Routes>
+
+
+      </BrowserRouter>
+
+
+    </>
   )
 }
 

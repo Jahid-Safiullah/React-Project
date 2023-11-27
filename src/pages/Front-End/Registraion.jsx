@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import TopHeader from '../../Front-End-Component/TopHeder';
 import Navbar from '../../Front-End-Component/Navbar/Navber';
-// import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'; 
 import Footer from '../../Front-End-Component/footer/Footer';
 
-function LoginForm() {
+function Registraion() {
   useEffect(()=>{
     if(localStorage.getItem("user-info")){
       navigate("/Sidebar"); 
@@ -15,11 +14,15 @@ function LoginForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const history = useHistory();
   const navigate = useNavigate(); 
 
 
   async function signUp() {
+      // Check if any of the fields are empty
+  if (!name || !email || !password) {
+    alert("Please fill in all fields");
+    return;
+  }
     let item = { name, email, password };
     console.warn(item);
 
@@ -36,8 +39,6 @@ function LoginForm() {
       result = await result.json();
       
       localStorage.setItem("user-info", JSON.stringify(result));
-      console.log("Data stored in localStorage");
-      // history.push("/add")
       navigate("/Sidebar"); 
       console.warn("result", result);
     } catch (error) {
@@ -97,4 +98,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default Registraion;
