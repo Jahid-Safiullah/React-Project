@@ -56,9 +56,9 @@ body, ul {
     transition: background-color 0.3s ease, border-left 0.3s ease;
   }
   
-  .sidebar a.active,
+  /* .sidebar a.active, */
   .sidebar a:hover {
-    background-color: #22a405;
+    background-color: #008020;
     border-left: 4px solid #fff;
   }
   

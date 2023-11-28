@@ -24,6 +24,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Login from './pages/Front-End/Login';
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/Launch" element={<Launch />} />
           <Route path="/Train" element={<Train />} />
           <Route path="/Registraion" element={<Registraion />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="*" element={<Error />} />
           {/* <Route path="/carousel" element={<Carousel />} /> */}
 

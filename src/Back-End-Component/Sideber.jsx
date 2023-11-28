@@ -17,8 +17,8 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="container-fluid ">
-          <aside className="sidebar">
+      <div className="container-fluid  ">
+          <aside className="sidebar ">
             <div className="logo">
             
             <img src="..\assets\Shohoz_logo_173x74.svg" alt="Shohoz_logo" style={{height:"60px"}} />
@@ -42,12 +42,11 @@ const Sidebar = () => {
 
                 <li><Link to="/LaunchManagment"><i className="fa fa-ship"></i> Launch Management</Link></li>
                 <li><Link to="/TrainManagement"><i className="fa fa-train"></i> Train Management</Link></li>
-                <li><Link to="/reports"><i className="fa fa-bar-chart"></i> Reports</Link></li>
-
-                <li><Link to="/Logout"> Log out</Link></li>
+                {/* <li><Link to="/reports"><i className="fa fa-bar-chart"></i> Reports a</Link></li> */}
                 
-               <li>
-               <NavDropdown title={user.name} style={{color:"white"}} >
+               <li  >
+                
+               <NavDropdown title={<span><i className="fa fa-user" style={{ marginRight: '5px' }}></i>{user.name}</span>} style={{color:"white"}} >
                   <NavDropdown.Item onClick={logout} style={{color:"black"}} > <i className="fa fa-sign-out"></i>Log out</NavDropdown.Item>
                   <NavDropdown.Item style={{color:"black"}}>Profile</NavDropdown.Item>
                 </NavDropdown>

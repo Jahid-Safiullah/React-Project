@@ -18,10 +18,9 @@ function Registraion() {
 
 
   async function signUp() {
-      // Check if any of the fields are empty
-  if (!name || !email || !password) {
-    alert("Please fill in all fields");
-    return;
+    if (!name || !email || !password) {
+      alert("Please fill in all fields");
+      return;
   }
     let item = { name, email, password };
     console.warn(item);
