@@ -41,6 +41,7 @@ export default function Login() {
       }
 
       localStorage.setItem('user-info', JSON.stringify(result));
+      localStorage.setItem('login',true);
       navigate("/Sidebar");
     // } catch (error) {
     //   console.error("Error during login:", error);
@@ -53,7 +54,7 @@ export default function Login() {
       <Navbar />
       <div className="col-sm-4 offset-sm-4 card p-5 mt-5 mb-5">
         <div className="input-group input-group-sm mb-3">
-          <span className="input-group-text" id="inputGroup-sizing-sm">Email:</span>
+          <span className="input-group-text width:10px" id="inputGroup-sizing-sm">Email:</span>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
