@@ -1,7 +1,7 @@
 import React from 'react'
-import Nave from '../../Back-End-Component/Navber'
-import Sideber from '../../Back-End-Component/Sideber'
-import Navber from '../../Back-End-Component/Navber'
+import Nave from './Dashbord/Navber'
+import Dashbord from '../Back-End/Dashbord/Dashbord'
+import Navber from './Dashbord/Navber'
 export default function BackendHome() {
   
   return (
@@ -9,7 +9,7 @@ export default function BackendHome() {
       {/* <div><Navber  /></div> */}
        
         <div>
-            <Sideber />
+            <Dashbord />
 
         </div>
 

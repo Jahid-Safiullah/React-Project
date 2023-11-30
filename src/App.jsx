@@ -10,9 +10,9 @@ import Registraion from './pages/Front-End/Registraion'
 import Error from './pages/Front-End/Error'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from './Back-End-Component/Sideber'
+import Dashbord from './pages/Back-End/Dashbord/Dashbord'
 
-import BusManagement from './pages/Back-End/BusManagement'
+import AddBus from './pages/Back-End/Bus_management/AddBus'
 import LaunchManagment from './pages/Back-End/LaunchManagment';
 import Logout from './pages/Back-End/Logout'
 import BackendHome from './pages/Back-End/Home'
@@ -25,6 +25,7 @@ import {
   Route,
 } from "react-router-dom";
 import Login from './pages/Front-End/Login';
+
 
 
 export default function App() {
@@ -51,12 +52,12 @@ export default function App() {
           {/* <Route path="/carousel" element={<Carousel />} /> */}
 
 
-          {/*--------------------------------- backend router -------------------------------------------------------------------*/}
+          {/*--------------------------------- backend router ------------------------------------------------------*/}
 
 
-          <Route path="/Sidebar" element={<Protected Cmp={Sidebar} />} />
+          <Route path="/Dashbord" element={<Protected Cmp={Dashbord} />} />
 
-          <Route path="/BusBookingList" element={<Protected Cmp={BusBookingList} />} >
+          <Route path="/BusBookingList" element={<Protected Cmp={AddBus} />} >
             <Route path="/BusBookingList/EditBus/:id" element={<Protected Cmp={EditBus} />} />
           </Route>
           <Route path="/LaunchManagment" element={<Protected Cmp={LaunchManagment} />} />

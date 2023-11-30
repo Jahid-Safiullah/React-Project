@@ -1,24 +1,18 @@
 import { NavLink } from "react-router-dom";
-import { Nav,NavDropdown } from "react-bootstrap";
-import "./Sideber.css"
+import { Nav, } from "react-bootstrap";
+import "./Dashbord.css"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navber from "./Navber";
-import { useNavigate } from "react-router-dom";
+
 
 
 const Sidebar = () => {
-  const user=JSON.parse(localStorage.getItem('user-info'));
-  const navagation=useNavigate();
-  function logout(){
-    localStorage.clear();
-    navagation("/login")
-  }
 
   return (
     <>
-      <div className="container-fluid  ">
-          <aside className="sidebar ">
+      <div className=" ">
+          <aside className="sidebar" style={{marginTop:"88px"}}>
             <div className="logo">
             
             <img src="..\assets\Shohoz_logo_173x74.svg" alt="Shohoz_logo" style={{height:"60px"}} />
@@ -43,13 +37,9 @@ const Sidebar = () => {
                 <li><Link to="/LaunchManagment"><i className="fa fa-ship"></i> Launch Management</Link></li>
                 <li><Link to="/TrainManagement"><i className="fa fa-train"></i> Train Management</Link></li>
                 {/* <li><Link to="/reports"><i className="fa fa-bar-chart"></i> Reports a</Link></li> */}
+               <li className="" style={{}} >
                 
-               <li  >
-                
-               <NavDropdown title={<span><i className="fa fa-user" style={{ marginRight: '5px' }}></i>{user.name}</span>} style={{color:"white"}} >
-                  <NavDropdown.Item onClick={logout} style={{color:"black"}} > <i className="fa fa-sign-out"></i>Log out</NavDropdown.Item>
-                  <NavDropdown.Item style={{color:"black"}}>Profile</NavDropdown.Item>
-                </NavDropdown>
+               
                </li>
               </Nav>
 

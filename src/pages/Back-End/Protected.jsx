@@ -7,6 +7,7 @@ export default function Protected(props) {
   let Cmp=props.Cmp
   useEffect(() => {
     if (!localStorage.getItem("user-info")) {
+      navagation("/login")
       alert('Not logged in');
     }
   }, []);

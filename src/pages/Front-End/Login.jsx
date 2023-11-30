@@ -42,7 +42,7 @@ export default function Login() {
 
       localStorage.setItem('user-info', JSON.stringify(result));
       localStorage.setItem('login',true);
-      navigate("/Sidebar");
+      navigate("/Dashbord");
     // } catch (error) {
     //   console.error("Error during login:", error);
     // }

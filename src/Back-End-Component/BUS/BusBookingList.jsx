@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Bus.css";
-import Sidebar from "../Sideber";
+import Dashbord from "../../pages/Back-End/Dashbord/Dashbord";
 import Navber from "../../Front-End-Component/Navbar/Navber";
 
 function BusBookingList() {
@@ -66,7 +66,7 @@ function BusBookingList() {
    <div className="conatainer-fluid d-flex">
    
     <div className="col-md-3">
-      <Sidebar />
+      <Dashbord />
    </div>
     <div className="col-md-8 p-0 m-0 ">
       <h1 className="bg-success text-light ">Bus information Listing </h1>
