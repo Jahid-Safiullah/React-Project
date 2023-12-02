@@ -38,7 +38,7 @@ function Registraion() {
       result = await result.json();
       
       localStorage.setItem("user-info", JSON.stringify(result));
-      navigate("/Sidebar"); 
+      navigate("/Dashbord"); 
       console.warn("result", result);
     } catch (error) {
       console.error("Error during sign-up:", error);

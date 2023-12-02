@@ -19,7 +19,7 @@ function Navber() {
           <NavbarBrand href="/"> <img src={Logo} alt="Shohoz_logo" style={{ height: "60px" }} /> </NavbarBrand>
 
           <Nav  >
-            <NavDropdown title={<span><i className="fa fa-user" style={{ marginRight: '5px' }}></i>{user.name}</span>} style={{ color: "white" }} >
+            <NavDropdown title={<span><i className="fa fa-user" ></i> {user.name}</span>}  >
               <NavDropdown.Item onClick={logout} style={{ color: "black" }} > <i className="fa fa-sign-out"></i>Log out</NavDropdown.Item>
               <NavDropdown.Item style={{ color: "black" }}>Profile</NavDropdown.Item>
             </NavDropdown>

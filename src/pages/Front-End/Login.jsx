@@ -12,7 +12,7 @@ export default function Login() {
 
   useEffect(() => {
     if (localStorage.getItem('user-info')) {
-      navigate("/Sidebar");
+      navigate("/Dashbord");
     }
   }, []);
 
@@ -41,7 +41,7 @@ export default function Login() {
       }
 
       localStorage.setItem('user-info', JSON.stringify(result));
-      localStorage.setItem('login',true);
+      // localStorage.setItem('login',true);
       navigate("/Dashbord");
     // } catch (error) {
     //   console.error("Error during login:", error);

@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashbord from './pages/Back-End/Dashbord/Dashbord'
 
 import AddBus from './pages/Back-End/Bus_management/AddBus'
-import LaunchManagment from './pages/Back-End/LaunchManagment';
+import AddLaunch from './pages/Back-End/Launch_management/AddLaunch';
 import Logout from './pages/Back-End/Logout'
 import BackendHome from './pages/Back-End/Home'
 import BusBookingList from './Back-End-Component/BUS/BusBookingList'
@@ -60,7 +60,7 @@ export default function App() {
           <Route path="/BusBookingList" element={<Protected Cmp={AddBus} />} >
             <Route path="/BusBookingList/EditBus/:id" element={<Protected Cmp={EditBus} />} />
           </Route>
-          <Route path="/LaunchManagment" element={<Protected Cmp={LaunchManagment} />} />
+          <Route path="/LaunchManagment" element={<Protected Cmp={AddLaunch} />} />
           <Route path="/Logout" element={<Protected Cmp={Logout} />} />
 
           {/* <Route path="/TrainManagement" element={<TrainManagement />} /> */}
