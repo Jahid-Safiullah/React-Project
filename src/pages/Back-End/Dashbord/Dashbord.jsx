@@ -15,7 +15,7 @@ const Dahsbord = () => {
                 < Navber />
             </div>
             <div className=' container-fluid d-flex ' >
-                <div className='col-md-3'>
+                <div>
                     <aside className="sidebar" style={{ marginTop: "88px" }}>
                         <div className="logo">
                             <h2>Admin Dashboard</h2>

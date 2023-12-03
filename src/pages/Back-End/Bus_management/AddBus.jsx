@@ -5,28 +5,78 @@ import Dashbord from '../Dashbord/Dashbord';
 
 
 
+
 export default function AddBus() {
   return (
     <>
-      {/* <div className='container-fluid striky navbar-expand-sm  fixed-top '>
-        <Navbar />
-      </div> */}
-      <div className=' container-fluid d-flex ' >
-        <div >
+      <div className='container-fluid d-flex' >
+        <div className='col-md-3'>
           <Dashbord />
         </div>
-        <div className='bg-white' style={{marginTop:"100px", marginLeft:"300px"}}>
 
-         <div className='p-5' >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem cumque cupiditate dolor magnam voluptatem eius modi illo deleniti praesentium fugit impedit natus quisquam quaerat possimus, nemo omnis quasi velit recusandae quia. Excepturi itaque facere ratione dolorum pariatur rem voluptas architecto corrupti, provident fugiat, magni aliquam, totam maxime sequi suscipit. Quis sint aliquam officiis ullam architecto culpa earum temporibus? Illum doloremque quia iste saepe rem amet cum quasi, hic porro excepturi magnam! Maxime mollitia quisquam nostrum? Itaque, non ullam. Aperiam inventore corrupti eveniet officiis, debitis incidunt atque dolor, eaque obcaecati aliquam, sint dolorum aut molestias ducimus nam amet labore fugiat maiores. Iure culpa voluptates tenetur nobis? Perspiciatis maxime reiciendis harum vero, consequatur explicabo in, nulla fugiat ducimus eveniet porro, maiores deserunt aliquam nemo sint. Porro tempore obcaecati maiores voluptatem nihil nulla similique, laudantium modi sed qui consectetur ipsum maxime eligendi aliquam ea numquam illum temporibus soluta officiis totam necessitatibus? Facere harum adipisci aperiam ea amet fugiat rem quis, omnis excepturi nihil molestiae placeat praesentium qui cum repellendus temporibus enim consequatur quidem recusandae ipsam fuga aliquid, odit accusamus officia! Exercitationem error illum id iusto, tenetur ab eligendi odio, qui laborum laudantium dicta ullam est? Sapiente odit excepturi quod explicabo! Commodi sint illo tenetur laborum totam provident eius earum optio, eos numquam possimus? Ratione fugiat eligendi blanditiis deleniti nam, nostrum hic! Atque corrupti velit eveniet ipsam porro laudantium! Deleniti soluta harum itaque laboriosam necessitatibus quibusdam neque iste velit ullam magnam assumenda dolor dicta ad praesentium officiis ducimus numquam, aperiam distinctio est non, veritatis eius totam, consectetur optio? Illo mollitia et reiciendis natus, molestias aliquam enim tempore quas deserunt explicabo quasi quos, iste eius sit veniam expedita itaque esse, voluptatem temporibus incidunt ex provident. Itaque dolorem iure, consequuntur molestiae eligendi nobis ex iste numquam adipisci voluptates ut quae tenetur deleniti vel ducimus porro magni veniam! Unde quibusdam eveniet dolor voluptates sequi voluptatem culpa maiores illum veritatis accusamus deserunt magnam iure vitae magni eos qui atque ipsa, quos perspiciatis cum. Soluta quasi velit accusamus! Placeat quis possimus nulla, numquam animi error? Voluptas laborum, alias necessitatibus laboriosam consectetur ex aut, pariatur modi aspernatur amet, labore minima corrupti! Sit quos ex neque dignissimos facilis quas labore eum earum! Necessitatibus, cum. Voluptatem quia natus asperiores eveniet, quasi consequatur numquam dignissimos nobis totam dolorum, excepturi cumque! Vel voluptatibus architecto tempora iure excepturi quod corporis alias assumenda ipsam omnis perferendis officia, odit est? Veritatis ad modi, repellat quidem excepturi eum itaque cumque nam dolores! Alias laborum officiis delectus illum, commodi reiciendis voluptatum a quasi dolor excepturi unde nisi ducimus cumque pariatur ipsam repellendus, sint ab voluptatem non. Quas ullam eaque accusantium illo expedita placeat voluptate dicta nesciunt! Aperiam officia maxime cumque provident quidem, molestias, quas, architecto molestiae dolorum qui nobis sapiente eos. Quisquam quidem dolorum reprehenderit tenetur minima sit praesentium nobis ullam corporis dicta laboriosam, in unde, perferendis molestias accusamus suscipit placeat esse provident eligendi aspernatur saepe, quas maxime! Est, ad commodi rerum saepe ipsa fugit blanditiis ea deserunt sunt ab, quasi at voluptatum quia voluptates inventore, itaque illum alias! Aliquam neque repellendus veniam, voluptatem dolores tempora! Corporis, illum vel numquam error aliquam tempora repellat ratione incidunt minus molestias at dolore veniam qui quisquam reprehenderit ipsam placeat voluptas provident omnis quasi! Fugiat soluta maiores sunt asperiores cupiditate eius beatae vitae voluptate nesciunt? Eaque voluptates atque possimus exercitationem totam esse ipsa ab, eius nobis dolore repellat tempora quasi dicta assumenda non expedita illo temporibus at in? Facilis minima totam harum dolore corporis! Eius, voluptatum dignissimos ut odio molestias delectus ab repudiandae quia accusamus, ducimus reiciendis architecto saepe! Vitae maiores repellat, repellendus incidunt est saepe amet quaerat magni. Voluptate tenetur excepturi aspernatur quo sed pariatur dignissimos laborum ipsam consectetur. Nulla, quo nemo vitae voluptas quae dolorem doloribus commodi itaque quod facere ex error numquam in reprehenderit ullam facilis excepturi. Eius voluptatibus asperiores nihil nam quia repellendus at rerum debitis vitae delectus fuga consequuntur quibusdam ipsum est, facere voluptates velit incidunt reiciendis exercitationem earum. A perspiciatis molestias maxime quos magnam quas obcaecati autem quam labore, unde nobis provident nam repudiandae, iusto optio magni vero necessitatibus vel delectus deserunt doloribus assumenda! Illum qui magnam excepturi eius voluptatum veritatis saepe. Beatae fugit cumque repellat et enim? Odit fuga, ratione velit assumenda accusamus quisquam excepturi asperiores recusandae dolorum laudantium sed quae ab praesentium reprehenderit inventore animi est voluptatem quam? Ratione, aliquid? Velit, mollitia! Obcaecati et aspernatur ducimus minima, quaerat, molestias rerum reiciendis voluptas velit sit quidem. Nobis vel tenetur asperiores praesentium aliquam dolore pariatur ipsa nisi facere architecto? Doloribus id molestiae obcaecati, quaerat in alias vero ratione nihil quam suscipit nulla facere. Sequi necessitatibus assumenda modi, magnam natus ullam animi illo pariatur, et atque laboriosam quidem suscipit veritatis. Facilis eveniet, consectetur eius, esse laborum qui quis fugit praesentium mollitia itaque delectus vitae, perferendis pariatur laboriosam doloremque voluptates iste magni repellat id ut. Numquam enim nam laboriosam aliquid qui repellat quaerat quisquam tempora dignissimos id voluptates consectetur quos, odio amet asperiores quam natus minus. Ratione praesentium corrupti doloremque, rem quisquam labore beatae ducimus. Earum delectus temporibus quae nihil sint aliquid facilis nam aut incidunt repudiandae quo, sapiente animi. Provident voluptatibus similique non optio harum, id quam. Consectetur repellat maiores aut sapiente molestiae veniam obcaecati. Recusandae esse fugiat magnam voluptas sed fugit saepe qui perferendis ullam. Iste veritatis recusandae voluptates sequi perspiciatis molestias vitae, nihil dolorem quibusdam placeat repellat. Quo aspernatur quod voluptate repellendus quaerat unde harum aut, labore deserunt nesciunt necessitatibus et magni obcaecati quisquam earum praesentium omnis! Animi iste voluptatum cum. Temporibus culpa aspernatur laboriosam. Fugit non dignissimos error, itaque facere sed cum voluptate eligendi natus, ipsam ex aperiam, animi ut. Corrupti cupiditate odit quae molestiae, ut consequuntur nostrum repellat rerum inventore nesciunt a eligendi possimus saepe laborum atque libero praesentium magni id assumenda laboriosam cumque dolores error beatae sit! Eum, necessitatibus molestias? Nulla quia doloribus et possimus? Consequatur obcaecati sequi voluptates enim facere dicta, modi perspiciatis ad quae tempora, accusamus minus accusantium? Quasi alias doloribus in sequi corporis, quod voluptas saepe dolores esse quo, cupiditate temporibus ipsa voluptatum tempore ipsum quas aspernatur! Cupiditate, ipsum adipisci!</div>
+        <div className='bg-white col-md-9' style={{ marginTop: "88px" }} >
+
+          <div className="text-end p-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Bus</button>
+          </div>
+
+          <div className='p-4 table-responsive-lg card' >
+            <table class="table table-hover">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>
+                   <a href="">Edit</a>
+                   <a href="">Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
         </div>
 
 
 
-
-
-        {/* <h5><Link style={{textDecoration:"none"}} to="/BusBookingList">Go to Bus Booking List</Link></h5> */}
-
+        {/* Modal */}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
