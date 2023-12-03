@@ -7,6 +7,21 @@ import Dashbord from '../Dashbord/Dashbord';
 
 
 export default function AddBus() {
+  const fruits = ['aam', 'jam', 'kola', 'lichu', 'kathal'];
+  const customFunction = (fruit, index) => {
+    // Perform some logic (check if the length is greater than 5)
+    const isLongFruit = fruit.length > 5;
+
+    // Display different messages based on the logic
+    if (isLongFruit) {
+      return `The fruit name is long: ${fruit}`;
+    } else {
+      return `The fruit name is not long: ${fruit}`;
+    }
+  };
+  const Math=39;
+  const English=42;
+  const Result=40;
   return (
     <>
       <div className='container-fluid d-flex' >
@@ -26,20 +41,58 @@ export default function AddBus() {
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                  <th scope="col">Math</th>
+                  <th scope="col">English</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody class="table-group-divider">
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <th scope="row">
+                  <ul>
+                    {fruits.map((fruit, index) => (
+                      <li key={index.toString()}>
+                        {/* Invoke the function and display the result */}
+                        {customFunction(fruit, index)}
+                      </li>
+                    ))}
+                  </ul>
+                  </th>
                   <td>
-                   <a href="">Edit</a>
-                   <a href="">Delete</a>
+                    <select>
+                      {fruits.map((item, index) => {
+                        return <option key={index.toString()}> Item at index{index}: {item}</option>
+                      })}
+                    </select>
+                  </td>
+                  <td>
+                    {
+                      Math>=40? <h1>Pass</h1> : <h1>Fail</h1>
+                    }
+                  </td>
+                  <td>
+                    {
+                     (()=>{
+                      if(Result >=80 && Result<=100){
+                        return <h1>A+</h1>
+                      }
+                      else if(Result >=60 && Result<80){
+                        return <h1>B</h1>
+                      }
+                      else if(Result >=40 && Result<60){
+                        return <h1>D</h1>
+                      }
+                      else{
+                        return <h1>F</h1>
+                      }
+
+                     })()
+                    }
+
+                  </td>
+                  <td>
+                    <a href="">Edit</a>
+                    <a href="">Delete</a>
                   </td>
                 </tr>
               </tbody>

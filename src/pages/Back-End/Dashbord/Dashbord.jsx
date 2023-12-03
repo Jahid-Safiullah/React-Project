@@ -1,13 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { Nav, } from "react-bootstrap";
 import "./Dashbord.css"
-import React from 'react'
+import React,{ useState ,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navber from './Navber';
 
 
 
+
+
 const Dahsbord = () => {
+  
 
     return (
         <>
@@ -34,7 +37,7 @@ const Dahsbord = () => {
                                 </div>
 
 
-                                <li><Link to="/BusBookingList"><i className="fa fa-bus"></i> Bus Management</Link></li>
+                               <li><Link to="/BusBookingList"><i className="fa fa-bus"></i> Bus Management</Link></li>
 
                                 <li><Link to="/LaunchManagment"><i className="fa fa-ship"></i> Launch Management</Link></li>
                                 <li><Link to="/TrainManagement"><i className="fa fa-train"></i> Train Management</Link></li>
@@ -45,12 +48,21 @@ const Dahsbord = () => {
                         </ul>
                     </aside>
                 </div>
-                    {/* <div className='col-md-9'>
+                {/* <div className='col-md-9'>
                         <div>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iste corrupti culpa aliquid delectus tempora distinctio animi ducimus ipsum perspiciatis architecto a dignissimos, quibusdam aut, quia alias rem nesciunt atque dolore deserunt? Error tempore nobis ab eos quidem sit, deserunt natus mollitia? Consequuntur facilis, eligendi placeat nesciunt magni explicabo soluta quas fugiat, illo eum tempore esse dolor nemo consequatur nostrum recusandae quibusdam cum nobis? Reprehenderit, ratione quam! Modi illum fuga unde nihil ratione culpa libero, voluptates fugit corrupti iure eius voluptatibus, sint reiciendis ducimus quod alias! Aliquam dignissimos officiis, quasi assumenda soluta sunt unde porro culpa a itaque. Iure explicabo placeat, animi nam
                         </div>
                     </div>
              */}
+                {/* <div className="col-md-9">
+                    <ol >
+                        {
+                            item.map((item, index) => {
+                                return <li>{item}</li>
+                            })
+                        }
+                    </ol>
+                </div> */}
             </div>
         </>
     )

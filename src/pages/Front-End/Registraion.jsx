@@ -7,7 +7,7 @@ import Footer from '../../Front-End-Component/footer/Footer';
 function Registraion() {
   useEffect(()=>{
     if(localStorage.getItem("user-info")){
-      navigate("/Sidebar"); 
+      navigate("/Dashbord "); 
     }
   })
 
