@@ -21,7 +21,7 @@ export default function AddBus() {
   };
   const Math=39;
   const English=42;
-  const Result=40;
+  const Result=30;
   return (
     <>
       <div className='container-fluid d-flex' >
